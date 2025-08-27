@@ -1,0 +1,221 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    position: relative;
+}
+main {
+    flex: 1;
+    padding: 60px 0;
+    min-height: max-content;
+    align-content: center;
+}
+footer {
+    background: none;
+    padding: 10px 20px;
+    justify-items: right;
+}
+
+
+/* Header */
+.header-menu > li > a {
+    color: var(--gray);
+}
+.header-js-box > li > a {
+    color: var(--gray);
+}
+
+
+
+/* Main */
+.main-login {
+    justify-items: center;
+}
+.main-login > h1 {
+    position: relative;
+    padding: 0 10px;
+}
+.main-login > h1 > a {
+    color: var(--primary-dark);
+    font-size: 32px;
+    font-family: var(--header-font-light);
+}
+.main-login > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    padding: 30px 0 40px 0;
+}
+.main-login > form input[type=text],
+.main-login > form input[type=password] {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: var(--regular);
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    outline: none;
+}
+.main-login > form input[type=text]::placeholder,
+.main-login > form input[type=password]::placeholder {
+    color: var(--gray);
+}
+.main-login > form button[type=submit] {
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: var(--medium);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-dark);
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+}
+.main-login > form button[type=submit]:active {
+    outline: none;
+}
+
+
+.main-signup {
+    justify-items: center;
+}
+.main-signup > h1 {
+    position: relative;
+    padding: 0 10px;
+}
+.main-signup > h1 > a {
+    color: var(--primary-dark);
+    font-size: 32px;
+    font-family: var(--header-font-light);
+}
+.main-signup > form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 0 40px 0;
+}
+.signup-form-text {
+    padding: 4px;
+    font-size: 15px;
+    font-weight: var(--semi-bold);
+}
+.signup-form-text.require::after {
+    content: " *";
+    color: red;
+    font-size: 15px;
+    font-weight: var(--bold);
+    vertical-align: top;
+}
+.signup-form-wrap {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.signup-form-wrap > input[type=text],
+.signup-form-wrap > input[type=password] {
+    min-width: 1px;
+    flex: 1;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: var(--regular);
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    outline: none;
+}
+.main-signup > form button[type=button] {
+    width: 100px;
+    max-width: 100px;
+    height: 30px;
+    padding: 0 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: var(--medium);
+    background-color: var(--primary-dark);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.signup-form-wrap > p {
+    align-self: center;
+}
+.signup-form-sub-text {
+    padding: 4px;
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: var(--medium);
+}
+.signup-form-sub-text.correct {
+    color: rgb(45, 207, 45);
+}
+.signup-form-sub-text.wrong {
+    color: rgb(235, 61, 61);
+}
+.signup-opt-in {
+    display: flex;
+    gap: 10px;
+    padding: 30px 0 5px 0;
+}
+.signup-opt-in > label {
+    color: var(--darkgray);
+    font-size: 14px;
+    font-weight: var(--regular);
+}
+.signup-opt-in input[type=checkbox] {
+    vertical-align: middle;
+    margin: 0 5px;
+    width: 13px;
+    height: 13px;
+}
+
+.main-signup > form button[type=submit] {
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: var(--medium);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-dark);
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+}
+.main-signup > form button[type=submit]:active {
+    outline: none;
+}
+
+
+
+/* Footer */
+.footer-link {
+    display: flex;
+    padding: 5px 10px;
+    gap: 20px;
+}
+.footer-link > li {
+    position: relative;
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: var(--semi-bold);
+}
+.footer-link > li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background: var(--lightgray);
+}
+.footer-copyright {
+    padding: 2px 10px;
+    justify-self: right;
+}
