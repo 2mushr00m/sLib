@@ -65,7 +65,7 @@
                 <div class="header-category">
                     <ul>
                         <li>
-                            <a href="javascript:void(0)">자료검색</a>
+                            <a href="./search.html">자료검색</a>
                             <div class="header-sub-category">
                                 <div class="header-sub-category-desc">
                                     <p>
@@ -74,7 +74,7 @@
                                     </p>
                                 </div>
                                 <ul>
-                                    <li><a href="javascript:void(0)">통합자료검색</a></li>
+                                    <li><a href="./search.html">통합자료검색</a></li>
                                     <li><a href="javascript:void(0)">학술정보 서비스</a></li>
                                     <li><a href="javascript:void(0)">전자책</a></li>
                                     <li><a href="javascript:void(0)">희망도서 신청</a></li>
@@ -138,7 +138,7 @@
         </div>
 
     </header>
-
+    
     <nav>
         <div class="wrapper">
             <h1>통합 자료검색</h1>
@@ -181,14 +181,115 @@
         <main>
             <section class="main-search">
                 <form>
-                    <select name="serch-scope">
-                    <input type="text" placeholder="검색어를 입력해주세요.">
-                    <button type="submit"></button>
+                    <select name="search-scope">
+                        <option selected>제목</option>
+                        <option>저자</option>
+                        <option>출판사</option>
+                    </select>
+                    <div class="main-search-input">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <button type="submit"></button>
+                    </div>
                 </form>
             </section>
 
             <section class="main-result">
-        
+                <div class="main-result-alignment"></div>
+
+                <div class="main-result-content">
+                    <div class="main-result-content-item">
+                        <div class="main-result-img">
+                            <img src="./images/new1.jpg" alt="가공범">
+                            <div class="main-result-img-bookmark"></div>
+                        </div>
+                        <div class="main-result-desc">
+                            <h3 class="main-result-name">가공범</h3>
+                            <div class="main-result-author">
+                                <span class="author">히가시노 게이고</span>
+                                <span class="illustrator">없으면 생략</span>
+                                <span class="translator">김선영</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span>2025</span>
+                                <span>북다</span>
+                                <span>HG0000612759</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span>[성산도서관] 2층 종합자료실</span>
+                                <span class="print">833 히15ㄱ14</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span class="detail">자세히 보기</span>
+                            </div>
+                        </div>
+                        <div class="main-result-button">
+                            <div class="checkout">대출가능</div>
+                            <div class="bookmark">관심도서 등록</div>
+                        </div>
+                    </div>
+
+                    <div class="main-result-content-item">
+                        <div class="main-result-img">
+                            <img src="./images/new2.jpg" alt="키메라의 땅 1">
+                            <div class="main-result-img-bookmark"></div>
+                        </div>
+                        <div class="main-result-desc">
+                            <h3 class="main-result-name">키메라의 땅 1</h3>
+                            <div class="main-result-author">
+                                <span class="author">베르나르 베르베르</span>
+                                <span class="translator">김희진</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span>2025</span>
+                                <span>열린책들</span>
+                                <span>BB0000612759</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span>[성산도서관] 2층 종합자료실</span>
+                                <span class="print">843 베64ㅋ3</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span class="detail">자세히 보기</span>
+                            </div>
+                        </div>
+                        <div class="main-result-button">
+                            <div class="reserve">예약가능</div>
+                            <div class="bookmark">관심도서 등록</div>
+                        </div>
+                    </div>
+
+                    <div class="main-result-content-item">
+                        <div class="main-result-img">
+                            <img src="./images/new3.jpg" alt="키메라의 땅 1">
+                            <div class="main-result-img-bookmark"></div>
+                        </div>
+                        <div class="main-result-desc">
+                            <h3 class="main-result-name">우리는 왜 싸우는가</h3>
+                            <div class="main-result-author">
+                                <span class="author">크리스토퍼 블랫먼</span>
+                                <span class="translator">강주헌</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span>2025</span>
+                                <span>김영사</span>
+                                <span>CB0000612759</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span>[성산도서관] 2층 종합자료실</span>
+                                <span class="print">843 크23ㅇ</span>
+                            </div>
+                            <div class="main-result-text">
+                                <span class="detail">자세히 보기</span>
+                            </div>
+                        </div>
+                        <div class="main-result-button">
+                            <div class="impossible">대출불가</div>
+                            <div class="bookmark">관심도서 등록</div>
+                        </div>
+                    </div>
+
+                    
+                </div>
             </section>
         </main>
     </div>
@@ -209,7 +310,6 @@
         </div>
     </footer>
 
-    <script src="./js/header_main.js"></script>
     <script src="./js/header_sub.js"></script>
 </body>
 </html>

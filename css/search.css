@@ -4,6 +4,9 @@
     margin: 0 auto;
     max-width: var(--large-size);
 }
+.header-sub-category-desc {
+    top: 120px;
+}
 
 /* ───────── Nav ───────── */
 nav {
@@ -51,6 +54,8 @@ aside {
     position: relative;
     width: 200px;
 }
+
+/* aside-tag */
 .aside-tag {
     position: absolute;
     transform-origin: bottom;
@@ -67,17 +72,20 @@ aside {
     font-size: 24px;
     font-weight: var(--semi-bold);
 }
+
+/* aside-body */
 .aside-body {
     background-color: var(--primary-dark);
     border: 1px solid var(--primary-dark);
     border-radius: 0 5px 5px 5px;
 }
+/* aside-body - category */
 .aside-category {
     display: flex;
     flex-direction: column;
     background-color: white;
     margin: 15px 0;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 20px 15px 20px;
     gap: 10px;
 }
 .aside-category > li {
@@ -103,6 +111,7 @@ aside {
     font-weight: var(--medium); 
 }
 
+/* aside-body - category - sub category */
 .aside-sub-category {
     display: flex;
     flex-direction: column;
@@ -131,39 +140,198 @@ main {
     flex-direction: column;
     gap: 15px;
     width: calc(100% - 200px);
+    height: max-content;
     min-height: 500px;
     padding: 50px 60px 80px 50px;
+    margin-bottom: 80px;
 }
 
+/* main-search */
 .main-search {
-    display: grid;
-    grid-template-columns: 200px 1fr;
     padding: 5px 20px;
     width: 100%;
+    height: 50px;
     background-color: var(--primary-dark);
     border-radius: 20px;
-    gap: 20px;
-    background-color: var(--primary-dark);
 }
 .main-search > form {
-    height: 40px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    height: 100%;
+    gap: 20px;
 }
 .main-search > form > select {
+    color: white;
     background-color: transparent;
     border: none;
     outline: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: var(--medium);
 }
-.main-search > form > input[type=text] {
+.main-search-input {
+    display: flex;
     width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.main-search-input > input[type=text] {
+    width: calc(100% - 50px);
     height: 100%;
     padding: 5px 20px;
     font-size: 15px;
     border: none;
-    border-radius: 15px;
     outline: none;
+    background-color: transparent;
 }
-.main-search > form > input[type=text]::placeholder {
+.main-search-input > input[type=text]::placeholder {
     color: var(--gray);
+}
+.main-search-input > button[type=submit] {
+    width: 50px;
+    border: none;
+    background: center/25px url(../images/search.png) no-repeat;
+    background-color: transparent;
+}
+
+/* main-result */
+.main-result-alignment {
+    height: 50px;
+}
+
+.main-result-content-item {
+    display: grid;
+    grid-template-columns: max-content 1fr 120px;
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+    gap: 20px;
+}
+.main-result-content-item:not(:last-child) {
+    border-bottom: 1px solid var(--lightgray);
+}
+
+.main-result-img {
+    position: relative;
+    width: 140px;
+    aspect-ratio: 0.68/1;
+}
+.main-result-img > img {
+    width: 140px;
+    aspect-ratio: 0.68/1;
+    object-fit: cover;
+    object-position: center;
+}
+.main-result-img-bookmark {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: center/25px url(../images/bookmark.png) no-repeat;
+    top: -6px;
+    right: 10px;
+    transition: all 200ms ease-in-out;
+}
+.main-result-img-bookmark:hover {
+    background: center/25px url(../images/bookmark_hover.png) no-repeat;
+}
+.main-result-img-bookmark.bookmark {
+    animation: pop 0.4s ease forwards;
+    background: center/25px url(../images/bookmark_fill.png) no-repeat;
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+.main-result-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 30px 10px;
+}
+.main-result-name {
+    font-size: 20px;
+    font-weight: var(--semi-bold);
+}
+.main-result-author {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    padding-bottom: 10px;
+}
+.main-result-author > span {
+    font-size: 14px;
+    font-weight: var(--medium);
+}
+.main-result-author > span::after {
+    font-size: 14px;
+    font-weight: var(--regular);
+    color: var(--gray);
+    padding-left: 7px;
+}
+.main-result-author > span.author::after {
+    content: "글";
+}
+.main-result-author > span.illustrator::after {
+    content: "그림";
+}
+.main-result-author > span.translator::after {
+    content: "번역";
+}
+.main-result-text {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.main-result-text > span {
+    color: var(--gray);
+    font-size: 13px;
+}
+.main-result-text > span.print::after {
+    content: "";
+    width: 12px;
+    height: 100%;
+    padding-left: 20px;
+    background: center/12px url(../images/printer.png) no-repeat;
+}
+.main-result-text > span.detail::after {
+    content: "";
+    width: 12px;
+    height: 100%;
+    padding-left: 20px;
+    background: center/12px url(../images/detail.png) no-repeat;
+}
+
+.main-result-button {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+.main-result-button > div {
+    width: 100%;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.main-result-button > div.checkout {
+    background-color: var(--primary-light);
+}
+.main-result-button > div.reserve {
+    background-color: var(--sub-skyblue);
+}
+.main-result-button > div.impossible {
+    color: var(--gray);
+    background-color: var(--gainsboro);
+}
+.main-result-button > div.bookmark {
+    background-color: var(--sub-gold);
 }
 
 
@@ -172,12 +340,14 @@ main {
 
 /* 태블릿 - 1024px 이하 */
 @media screen and (max-width: 1024px) {
+    aside { display: none; }
+    main { width: 100%; }
+    nav > .wrapper { padding: 0 0 30px 40px; }
 }
 
 /* 모바일 - 768px 이하 */
 @media screen and (max-width: 768px) {
     nav, .container { min-width: var(--small-size); }
-    aside { display: none; }
-    main { width: 100%; }
-    nav > .wrapper { padding: 0 0 30px 40px; }
+    .main-result-content-item { grid-template-columns: max-content 1fr; }
+    .main-result-button { display: none; }
 }

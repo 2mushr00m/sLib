@@ -184,6 +184,8 @@ footer {
     width: 20px;
     height: 15px;
     background: center/10px url(../images/down.png) no-repeat;
+    transform: scaleY(1);
+    transition: transform 200ms linear;
 }
 .header-menu > li.active > a.dropdown::after {
     transform: scaleY(-1);
