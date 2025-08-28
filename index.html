@@ -178,7 +178,19 @@
         </section>
 
         <div class="main-container">
-            <section class="main-publicize"></section>
+            <section class="main-publicize">
+                <div class="event-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/event1.png" alt="여름 독서클럽 이벤트 안내">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/event2.png" alt="매주 토요일 어린이 영화 상영 안내">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
             
             <section class="main-quick-link">
                 <h3>자주 찾는 메뉴</h3>
@@ -328,7 +340,7 @@
             
             <section class="main-books">
                 <h2>신착도서</h2>
-                <article class="main-books-content swiper">
+                <article class="main-books-content book-swiper">
                     <div class="swiper-wrapper">
                         <div class="main-books-content-item swiper-slide">
                             <a href="javascript:void(0)">
@@ -404,7 +416,7 @@
             
             <section class="main-books">
                 <h2>인기 · 추천도서</h2>
-                <article class="main-books-content swiper">
+                <article class="main-books-content book-swiper">
                     <div class="swiper-wrapper">
                         <div class="main-books-content-item swiper-slide">
                             <a href="javascript:void(0)">
@@ -486,7 +498,7 @@
             <div class="footer-logo">성산시립도서관</div>
             <div class="footer-text"><p>전화&#41; 031-333-4444</p><p>팩스&#41; 031-333-4444</p></div>
             <div class="footer-text"><p>주소&#41;  123456 우편번호 도로명 주소 123-45 1번지</p></div>
-            <div class="footer-text"><p>Icons by Flaction - Freepik</p><p>Stickers by Flaction - Stickers</p><p>Images by unsplash</p></div>
+            <div class="footer-text"><p>Icons by Flaticon - Freepik</p><p>Stickers by Flaction - Stickers</p><p>Images by unsplash</p></div>
             <ul class="footer-sns">
                 <li><a href="javascript:void(0)">Youtube</a></li>
                 <li><a href="javascript:void(0)">인스타그램</a></li>
@@ -500,7 +512,7 @@
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
-        const swiper = new Swiper('.swiper', {
+        const bookSwiper = new Swiper('.book-swiper', {
             breakpoints: {
                 // 0px~
                 0: {
@@ -523,6 +535,22 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            },
+        });
+        
+        const eventSwiper = new Swiper('.event-swiper', {
+            direction: 'horizontal',
+            loop:true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false
+            },
+            speed: 600,
+            
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'bullets',
             },
         });
     </script>
