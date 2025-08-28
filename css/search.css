@@ -198,9 +198,37 @@ main {
 
 /* main-result */
 .main-result-alignment {
-    height: 50px;
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+    width: 100%;
+    padding: 0 20px;
 }
-
+.main-result-alignment-select {
+    color: var(--gray);
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: var(--regular);
+    margin: 0 15px;
+    padding: 0 5px;
+}
+.main-result-alignment-select > option {
+    font-size: 13px;
+    font-weight: var(--regular);
+}
+.main-result-alignment-grid {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--lightgray);
+    background: center/15px url(../images/grid.png) no-repeat;
+}
+.main-result-alignment-list {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--lightgray);
+    background: center/15px url(../images/list.png) no-repeat;
+}
 .main-result-content-item {
     display: grid;
     grid-template-columns: max-content 1fr 120px;
