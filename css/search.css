@@ -269,7 +269,7 @@ main {
 }
 .main-result-bookmark-ui {
     position: absolute;
-    top: -6px;
+    top: -5px;
     right: 10px;
     transition: all 200ms ease-in-out;
     --icon-size: 24px;
