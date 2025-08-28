@@ -229,6 +229,7 @@ main {
     border: 1px solid var(--lightgray);
     background: center/15px url(../images/list.png) no-repeat;
 }
+
 .main-result-content-item {
     display: grid;
     grid-template-columns: max-content 1fr 120px;
@@ -240,7 +241,6 @@ main {
 .main-result-content-item:not(:last-child) {
     border-bottom: 1px solid var(--lightgray);
 }
-
 .main-result-img {
     position: relative;
     width: 140px;
