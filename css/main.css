@@ -464,6 +464,7 @@
     font-weight: 900;
     color: var(--darkgray);
     position: absolute;
+    z-index: 1 !important;      /* 문제가생겻다아~ */
     top: -20px;
 }
 
